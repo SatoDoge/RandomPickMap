@@ -98,8 +98,14 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-window.onload = function () {
+async function getLatestMapId() {
+    const mapData = await fetchJson("https://api.beatsaver.com/maps/latest?pageSize=1")
+    document.getElementById("maxBsr").value = mapData.docs[0].id
+}
+
+window.onload = async function () {
     document.getElementById("searchBtn").addEventListener("click", async function () {
         await mainSearch();
     });
+    await getLatestMapId()
 };
