@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ランダムで生成するよ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="mb-3">
+            <label for="minBsr" class="form-label">Bsrフィルター</label>
+            <div class="input-group">
+                <input class="form-control" id="minBsr" placeholder="1以上">
+                <span class="input-group-text">~</span>
+                <input class="form-control" id="maxBsr">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="minDuration" class="form-label">曲の長さ</label>
+            <div class="input-group">
+                <input class="form-control" id="minDuration">
+                <span class="input-group-text">~</span>
+                <input class="form-control" id="maxDuration">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="minNPS" class="form-label">NPS</label>
+            <div class="input-group">
+                <input class="form-control" id="minNPS">
+                <span class="input-group-text">~</span>
+                <input class="form-control" id="maxNPS">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="minBPM" class="form-label">BPM</label>
+            <div class="input-group">
+                <input class="form-control" id="minBPM">
+                <span class="input-group-text">~</span>
+                <input class="form-control" id="maxBPM">
+            </div>
+        </div>
+        <label for="neOption" class="form-label">NoodleExtension</label>
+        <select class="form-select" id="neOption">
+            <option value="1">NoodleExtensionを含む</option>
+            <option value="2">NoodleExtensionを含まない</option>
+            <option value="3" selected>指定しない</option>
+        </select>
+        <label for="meOption" class="form-label">MappingExtension</label>
+        <select class="form-select" id="meOption">
+            <option value="1">MappingExtensionを含む</option>
+            <option value="2">MappingExtensionを含まない</option>
+            <option value="3" selected>指定しない</option>
+        </select>
+        <label for="chromaOption" class="form-label">Chroma</label>
+        <select class="form-select" id="chromaOption">
+            <option value="1">Chromaを含む</option>
+            <option value="2">Chromaを含まない</option>
+            <option value="3" selected>指定しない</option>
+        </select>
+        <label for="amOption" class="form-label">AutoMapper</label>
+        <select class="form-select" id="amOption">
+            <option value="2">AutoMapperを含む</option>
+            <option value="3">AutoMapperを含まない</option>
+            <option value="1" selected>指定しない</option>
+        </select>
+        <button type="button" class="btn btn-primary mt-3" id="searchBtn">生成</button>
+    </div>
+    <div class="container-sm mt-4">
+        <div id="beatsaverEmbed">
+            <iframe src="https://beatsaver.com/maps/42995/embed" width="600" height="145" loading="lazy" style="border: none; border-radius: 4px;"></iframe>
+        </div>
+        <a href="https://beatsaver.com/maps/1" id="resultUrl">me & u</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
