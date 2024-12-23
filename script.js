@@ -49,8 +49,7 @@ async function mainSearch() {
     console.log(randomizedJsonData)
     const randomizedMapData = randomizedJsonData.docs[randomizedNumber % 20]
     console.log(randomizedMapData)
-    document.getElementById("resultUrl").href = "https://beatsaver.com/maps/" + randomizedMapData.id
-    document.getElementById("resultUrl").textContent = randomizedMapData.name
+    document.getElementById("beatsaverEmbed").src = `https://beatsaver.com/maps/${randomizedMapData.id}/embed`
 }
 
 function hexAdd(hex1, hex2) {
